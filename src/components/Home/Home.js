@@ -50,12 +50,9 @@ class Home extends React.Component {
                         <List 
                             trialInfo = {trialsInfo["Ainz Ooal Gown"]}
                             setTrial = {this.setTrial.bind(this)}/>
-                        <List 
-                            trialInfo = {trialsInfo.Raine}
-                            setTrial = {this.setTrial.bind(this)}/>
-                        <List 
-                            trialInfo = {trialsInfo.Zaphrael}
-                            setTrial = {this.setTrial.bind(this)}/>
+                        {/* <List 
+                            trialInfo = {trialsInfo["Raine"]}
+                            setTrial = {this.setTrial.bind(this)}/> */}
                     </div>
                     {this.state.active == "None" ?
                         <div></div>

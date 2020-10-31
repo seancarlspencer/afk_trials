@@ -100,6 +100,17 @@ body{
             filter: drop-shadow(0px 0px 10px rgba(256,256,256,.6));
         }
     }
+    .number{
+        position: absolute;
+        color: black;
+        background-color: white;
+        border: solid black 2px;
+        padding: 5px 10px;
+        font-size: 20px;
+        font-weight: 700;
+        background-color: #EACB96;
+        border-radius: 5px;
+    }
 }
 
 .heroes-container{

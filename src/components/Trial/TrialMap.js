@@ -20,14 +20,10 @@ class TrialMap extends React.Component {
                             top: this.props.activeInfo.statues[statue].top,
                             left: this.props.activeInfo.statues[statue].left
                         }} /><span
+                        className="number"
                         style={{
-                            position: "absolute",
-                            color: "blue",
-                            backgroundColor: "white",
-                            padding: "10px",
-                            fontSize: "18px",
                             top: this.props.activeInfo.statues[statue].top,
-                            left: this.props.activeInfo.statues[statue].left
+                            left: `calc(${this.props.activeInfo.statues[statue].left} - 20px)`
                         }}>{statue}</span>
                         </div>
                         return <img
