@@ -9,6 +9,7 @@ class TrialMap extends React.Component {
             return <div></div>;
         }
         return <div className="map-container">
+                    <div className="trial-notification">Click on any <span className="highlight">statue</span> to reveal the winning formation below:</div>
                     <img src = {require(`../../assets/maps/${this.props.active}.png`)} className="map" />
                     {Object.keys(this.props.activeInfo.statues).map((statue, index) => {
                         console.log(this.props.activeInfo[this.props.activeInfo.statues[statue].pool]);
@@ -19,8 +20,9 @@ class TrialMap extends React.Component {
                         style={{
                             top: this.props.activeInfo.statues[statue].top,
                             left: this.props.activeInfo.statues[statue].left
-                        }} /><span
-                        className="number"
+                        }} />
+                        <span
+                        className={`number-${index+1}`}
                         style={{
                             top: this.props.activeInfo.statues[statue].top,
                             left: `calc(${this.props.activeInfo.statues[statue].left} - 20px)`

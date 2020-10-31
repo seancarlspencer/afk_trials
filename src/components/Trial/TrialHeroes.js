@@ -9,9 +9,9 @@ class TrialHeroes extends React.Component {
             return <div></div>;
         }
         return <div className="heroes-container">
-            <div className="statue-title">
+            {/* <div className="statue-title">
                 Statue #{this.props.activeStatue} Solution
-            </div>
+            </div> */}
                 <div className="hero-container">
                     <div className="hero-formation-container">
                         <div className="backline">

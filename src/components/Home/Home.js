@@ -41,6 +41,14 @@ class Home extends React.Component {
         this.setState({activeHeroes: temp});
         this.setState({activeLineup: lineup});
         this.setState({activeStatue: statueNum});
+        let currentHighlight = document.querySelector(".activeNum");
+        if (currentHighlight){
+            currentHighlight.classList.remove("activeNum");
+        }
+        let highlighted = document.querySelector(".number-"+statueNum);
+        if(highlighted){
+            highlighted.classList.add("activeNum");
+        }
     }
 
     render(){
