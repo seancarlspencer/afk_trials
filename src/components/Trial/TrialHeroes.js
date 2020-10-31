@@ -41,7 +41,6 @@ class TrialHeroes extends React.Component {
                                 if(index > 4){
                                     return;
                                 }
-                                console.log(this.props.activeLineup.indexOf(index+1));
                                 return <Hero 
                                         checked = {this.props.activeHeroes.checklist[index]}
                                         number = {this.props.activeLineup.indexOf(index+1) != -1 ? this.props.activeLineup.indexOf(index+1) + 1 : null}

@@ -29,7 +29,6 @@ class Home extends React.Component {
         this.setState({heroPools: pools});
         this.setState({activeInfo: info});
         this.setState({activeHeroes: temp});
-        console.log(this.state);
     }
 
     statueClicked(trial, pool, check, lineup, statueNum){

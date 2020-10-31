@@ -4,7 +4,6 @@ import Statue from './Statue';
 class TrialMap extends React.Component {
 
     render(){
-        console.log(this.props.activeInfo);
         if(this.props.activeInfo.statues == null){
             return <div></div>;
         }
@@ -12,7 +11,6 @@ class TrialMap extends React.Component {
                     <div className="trial-notification">Click on any <span className="highlight">statue</span> to reveal the winning formation below:</div>
                     <img src = {require(`../../assets/maps/${this.props.active}.png`)} className="map" />
                     {Object.keys(this.props.activeInfo.statues).map((statue, index) => {
-                        console.log(this.props.activeInfo[this.props.activeInfo.statues[statue].pool]);
                         return <div><img
                         src={require(`../../assets/tower basic.png`)}
                         onClick = {()=>this.props.statueClicked(this.props.activeInfo.name, this.props.activeInfo[this.props.activeInfo.statues[statue].pool], this.props.activeInfo.statues[statue].checked, this.props.activeInfo.statues[statue].lineup, statue)}
