@@ -10,8 +10,8 @@ class List extends React.Component {
         }
     }
     render(){
-        return <div className="list-item-container"
-                    onClick={()=>this.props.setTrial(this.props.trialInfo.name,this.pools, this.props.trialInfo)}>
+        return <div className={`list-item-container list-item-${this.props.index}`}
+                    onClick={()=>this.props.setTrial(this.props.trialInfo.name,this.pools, this.props.trialInfo, this.props.index)}>
                     <p className="list-item">
                         <a>{this.props.trialInfo.name}</a>
                     </p>

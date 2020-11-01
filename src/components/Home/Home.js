@@ -20,7 +20,7 @@ class Home extends React.Component {
         }
     }
 
-    setTrial(trial, pools, info){
+    setTrial(trial, pools, info, index){
         let temp = {
             herolist : null,
             checklist : null
@@ -29,6 +29,20 @@ class Home extends React.Component {
         this.setState({heroPools: pools});
         this.setState({activeInfo: info});
         this.setState({activeHeroes: temp});
+        this.setState({activeLineup: null});
+        this.setState({activeStatue: null});
+        let currentHighlight = document.querySelector(".activeNum");
+        if (currentHighlight){
+            currentHighlight.classList.remove("activeNum");
+        }
+        currentHighlight = document.querySelector(".activeTrial");
+        if (currentHighlight){
+            currentHighlight.classList.remove("activeTrial");
+        }
+        let highlighted = document.querySelector(".list-item-"+index+" .list-item");
+        if(highlighted){
+            highlighted.classList.add("activeTrial");
+        }
     }
 
     statueClicked(trial, pool, check, lineup, statueNum){
@@ -49,6 +63,16 @@ class Home extends React.Component {
             highlighted.classList.add("activeNum");
         }
     }
+    
+    componentDidMount(){
+        let temp = trialsInfo["Ainz Ooal Gown"];
+        let pools = {
+            pool1 : temp.pool1,
+            pool2 : temp.pool2,
+            pool3 : temp.pool3,
+        }
+        this.setTrial("Ainz Ooal Gown", pools, temp, 0);
+    }
 
     render(){
         return <div className="trial-outlet">
@@ -56,7 +80,8 @@ class Home extends React.Component {
                         <div className="list-title"><span className="list-title-first">T</span>RIALS</div>
                         <List 
                             trialInfo = {trialsInfo["Ainz Ooal Gown"]}
-                            setTrial = {this.setTrial.bind(this)}/>
+                            setTrial = {this.setTrial.bind(this)}
+                            index = {0}/>
                         {/* <List 
                             trialInfo = {trialsInfo["Raine"]}
                             setTrial = {this.setTrial.bind(this)}/> */}

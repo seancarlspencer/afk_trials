@@ -9,9 +9,12 @@ class Hero extends React.Component {
                     {this.props.name}
                     <div className="hero-icon-container">
                         <img className="hero-border" src={border}></img>
-                        {this.props.checked === 1 ? <div><img className="hero-check" src={check}></img></div> : <div></div>}
+                        {/* {this.props.checked === 1 ? <div><img className="hero-check" src={check}></img></div> : <div></div>} */}
                         <img className="hero-icon" src={`/assets/champs/${this.props.name}.webp`}></img>
-                        <div className="hero-position">{this.props.number >=0 ? this.props.number : ""}</div>
+                        {this.props.formation ? <div className="hero-position-formation">{this.props.number}</div>
+                        : <div></div>
+                        }
+                        {!this.props.formation && this.props.number >=1 ? <div className="hero-position">{this.props.number}</div> : ""}
                     </div>
                 </div>;
     }

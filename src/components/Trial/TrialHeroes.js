@@ -6,7 +6,11 @@ class TrialHeroes extends React.Component {
     render(){
 
         if(this.props.activeHeroes.herolist == null){
-            return <div></div>;
+            return <div className="heroes-container">
+                <div className="heroes-select-statue">
+                    Click on any of the statues above.
+                </div>
+            </div>;
         }
         return <div className="heroes-container">
             {/* <div className="statue-title">
@@ -21,6 +25,8 @@ class TrialHeroes extends React.Component {
                                 }
                                 return <Hero 
                                         checked = {false}
+                                        formation = {true}
+                                        number = {this.props.activeLineup.indexOf(hero) != -1 ? this.props.activeLineup.indexOf(hero) + 1 : null}
                                         name = {this.props.activeHeroes.herolist[hero-1]}/>
                             })}
                         </div>
@@ -31,8 +37,17 @@ class TrialHeroes extends React.Component {
                                 }
                                 return <Hero 
                                         checked = {false}
+                                        formation = {true}
+                                        number = {this.props.activeLineup.indexOf(hero) != -1 ? this.props.activeLineup.indexOf(hero) + 1 : null}
                                         name = {this.props.activeHeroes.herolist[hero-1]}/>
                             })}
+                        </div>
+                    </div>
+                    <div className="hero-solution">
+                        <div className="hero-solution-text">
+                            Statue #{this.props.activeStatue} Solution
+                        </div>
+                        <div className="hero-solution-border">
                         </div>
                     </div>
                     <div className="hero-row-container">
