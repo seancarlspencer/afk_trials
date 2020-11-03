@@ -65,13 +65,13 @@ class Home extends React.Component {
     }
     
     componentDidMount(){
-        let temp = trialsInfo["Ainz Ooal Gown"];
+        let temp = trialsInfo["Pippa"];
         let pools = {
             pool1 : temp.pool1,
             pool2 : temp.pool2,
             pool3 : temp.pool3,
         }
-        this.setTrial("Ainz Ooal Gown", pools, temp, 0);
+        this.setTrial("Pippa", pools, temp, 0);
     }
 
     render(){
@@ -79,9 +79,13 @@ class Home extends React.Component {
                     <div className="list_menu">
                         <div className="list-title"><span className="list-title-first">T</span>RIALS</div>
                         <List 
-                            trialInfo = {trialsInfo["Ainz Ooal Gown"]}
+                            trialInfo = {trialsInfo["Pippa"]}
                             setTrial = {this.setTrial.bind(this)}
                             index = {0}/>
+                        <List 
+                            trialInfo = {trialsInfo["Ainz Ooal Gown"]}
+                            setTrial = {this.setTrial.bind(this)}
+                            index = {1}/>
                         {/* <List 
                             trialInfo = {trialsInfo["Raine"]}
                             setTrial = {this.setTrial.bind(this)}/> */}

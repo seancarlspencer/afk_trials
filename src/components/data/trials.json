@@ -91,6 +91,98 @@
             }
         }
     },
+    "Pippa" : {
+        "name" : "Pippa",
+        "pool1" : ["Pippa","Hendrik","Nara","Lorsan","Rosaline","Safiya","Warek","Isabella","Vurk","Belinda"],
+        "pool2" : ["Pippa","Nara","Lorsan","Rowan","Estrilda","Seirus","Lucius","Isabella","Khasos","Lyca"],
+        "pool3" : ["Pippa","Arthur","Numisu","Estrilda","Seirus","Thoran","Ulmus","Isabella","Brutus","Nemora"],
+        "statues" : {
+            "1" : {
+                "top" : "100px",
+                "left" : "49px",
+                "pool" : "pool3",
+                "checked" : [1,0,0,0,1,1,0,1,0,1],
+                "lineup" : [6,5,10,8,1]
+            },
+            "2" : {
+                "top" : "382px",
+                "left" : "191px",
+                "pool" : "pool2",
+                "checked" : [1,0,0,1,0,1,1,0,0,1],
+                "lineup" : [7,6,1,4,10]
+            },
+            "3" : {
+                "top" : "507px",
+                "left" : "333px",
+                "pool" : "pool2",
+                "checked" : [1,1,0,0,0,1,1,0,0,1],
+                "lineup" : [7,6,2,1,10]
+            },
+            "4" : {
+                "top" : "721px",
+                "left" : "419px",
+                "pool" : "pool2",
+                "checked" : [1,1,0,0,0,1,1,0,0,1],
+                "lineup" : [7,6,2,1,10]
+            },
+            "5" : {
+                "top" : "-18px",
+                "left" : "535px",
+                "pool" : "pool3",
+                "checked" : [1,0,0,0,1,1,0,0,1,1],
+                "lineup" : [6,5,1,9,10]
+            },
+            "6" : {
+                "top" : "306px",
+                "left" : "600px",
+                "pool" : "pool2",
+                "checked" : [1,1,0,0,0,1,1,0,0,1],
+                "lineup" : [7,6,1,2,10]
+            },
+            "7" : {
+                "top" : "758px",
+                "left" : "856px",
+                "pool" : "pool1",
+                "checked" : [1,0,1,0,1,1,1,0,0,0],
+                "lineup" : [5,7,1,3,6]
+            },
+            "8" : {
+                "top" : "680px",
+                "left" : "976px",
+                "pool" : "pool1",
+                "checked" : [1,0,1,0,1,1,1,0,0,0],
+                "lineup" : [5,7,3,1,6]
+            },
+            "9" : {
+                "top" : "640px",
+                "left" : "1061px",
+                "pool" : "pool1",
+                "checked" : [1,1,1,0,0,0,1,0,0,1],
+                "lineup" : [2,7,1,3,10]
+            },
+            "10" : {
+                "top" : "469px",
+                "left" : "1005px",
+                "pool" : "pool3",
+                "checked" : [1,1,1,0,1,0,0,0,0,1],
+                "lineup" : [2,5,3,1,10]
+            },
+            "11" : {
+                "top" : "516px",
+                "left" : "1211px",
+                "pool" : "pool1",
+                "checked" : [1,1,1,0,1,0,1,0,0,0],
+                "lineup" : [2,7,1,5,3]
+            },
+            "12" : {
+                "top" : "429px",
+                "left" : "1211px",
+                "pool" : "pool3",
+                "checked" : [1,0,1,1,0,0,0,0,1,1],
+                "lineup" : [9,4,3,1,10]
+            }
+        }
+    },
     "Lucretia" : {
         "name" : "Lucretia",
         "pool1" : ["Raine","Fawkes","Belinda","Lucius","Rosaline","Eironn","Lyca","Tasi","Talene","Mehira"],
