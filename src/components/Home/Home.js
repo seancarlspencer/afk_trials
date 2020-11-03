@@ -86,6 +86,10 @@ class Home extends React.Component {
                             trialInfo = {trialsInfo["Ainz Ooal Gown"]}
                             setTrial = {this.setTrial.bind(this)}
                             index = {1}/>
+                        <List 
+                            trialInfo = {trialsInfo["Albedo"]}
+                            setTrial = {this.setTrial.bind(this)}
+                            index = {2}/>
                         {/* <List 
                             trialInfo = {trialsInfo["Raine"]}
                             setTrial = {this.setTrial.bind(this)}/> */}
