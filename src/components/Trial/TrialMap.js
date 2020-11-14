@@ -37,8 +37,10 @@ class TrialMap extends React.Component {
                             src={require(`../../assets/tower basic.png`)}
                             className={`image image-${index}`}
                             style={{
-                                top: `calc(${this.props.activeInfo.statues[statue].top} * calc(var(--trial-w) / 1422))`,
-                                left: `calc(${this.props.activeInfo.statues[statue].left} * calc(var(--trial-w) / 1422))`
+                                top: `calc(calc(${this.props.activeInfo.statues[statue].top} / 901) * var(--trial-height))`,
+                                left: `calc(calc(${this.props.activeInfo.statues[statue].left} / 1422) * var(--trial-width))`
+                                // top: `calc(${this.props.activeInfo.statues[statue].top} * calc(var(--trial-w) / 1422))`,
+                                // left: `calc(${this.props.activeInfo.statues[statue].left} * calc(var(--trial-w) / 1422))`
                             }} />
                             <span
                             className={`number-${index+1}`}

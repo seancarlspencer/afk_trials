@@ -1,25 +1,40 @@
 :root{
     --trial-width: 1342px;
+    --trial-height: calc(var(--trial-width) * .625);
     --trial-w: 1342;
     --hero-proportion: calc(var(--trial-width) * .07032);
     @media (min-width:320px) { 
-        --trial-width: 302px;
-        --trial-w: 302;
+        // --trial-width: 320px;
+        --trial-width: 100%;
+        --trial-height: 100%;
+        --hero-proportion: calc(var(--trial-w) * .07032px);
+        --trial-w: 320;
+        /* smartphones, iPhone, portrait 480x320 phones */
+     }
+    @media (min-width:411px) { 
+        // --trial-width: 411px;
+        --trial-w: 411;
         /* smartphones, iPhone, portrait 480x320 phones */
      }
     @media (min-width:481px) { 
-        --trial-width: 442px;
+        // --trial-width: 442px;
         --trial-w: 442;
         /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
      }
+    @media (min-width:576px) { 
+        // --trial-width: 556px;
+        --trial-w: 556;
+        /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+     }
     @media (min-width:641px) { 
-        --trial-width: 572px;
-        --trial-w: 572;
+        // --trial-width: 621px;
+        --trial-w: 621;
         /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
      }
     @media (min-width:768px) { 
-        --trial-width: 652px;
-        --trial-w: 652;
+        --trial-width: 682px;
+        --hero-proportion: calc(var(--trial-width) * .07032);
+        --trial-w: 682;
         /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
      }
     @media (min-width:961px) { 
@@ -49,6 +64,8 @@
 body{
     color: white;
     font-family: 'Raleway', sans-serif;
+    position: absolute;
+    width: 100vw;
 }
 
 .trial-outlet{
@@ -150,6 +167,9 @@ body{
         display: none;
         /* big landscape tablets, laptops, and desktops */
      }
+    @media (max-width:481px) { 
+        font-size: 12px;
+     }
 }
 
 .map-container{
@@ -183,6 +203,10 @@ body{
         position: absolute;
         transition: all .1s ease-out;
         height: calc(var(--trial-width) * .0675);
+        @media (max-width:768px) { 
+            height: calc(var(--trial-width) * .1175);
+            /* big landscape tablets, laptops, and desktops */
+         }
         &.activeImg{
             transform: scale(1.2);
             transition: all .3s ease-out;

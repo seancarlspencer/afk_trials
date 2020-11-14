@@ -57,7 +57,7 @@ class TrialHeroes extends React.Component {
                                     return;
                                 }
                                 return <Hero 
-                                        checked = {this.props.activeHeroes.checklist[index]}
+                                        checked = {this.props.activeLineup.indexOf(index+1) != -1}
                                         number = {this.props.activeLineup.indexOf(index+1) != -1 ? this.props.activeLineup.indexOf(index+1) + 1 : null}
                                         name = {hero}/>
                             })}
@@ -68,7 +68,7 @@ class TrialHeroes extends React.Component {
                                     return;
                                 }
                                 return <Hero 
-                                        checked = {this.props.activeHeroes.checklist[index]}
+                                        checked = {this.props.activeLineup.indexOf(index+1) != -1}
                                         number = {this.props.activeLineup.indexOf(index+1) != -1 ? this.props.activeLineup.indexOf(index+1) + 1 : null}
                                         name = {hero}/>
                             })}
