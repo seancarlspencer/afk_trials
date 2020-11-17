@@ -14,6 +14,7 @@ class Trial extends React.Component {
                         active = {this.props.active}/>
                     <TrialHeroes 
                         activeLineup = {this.props.activeLineup}
+                        additionalLineups = {this.props.additionalLineups}
                         activeStatue = {this.props.activeStatue}
                         activeHeroes = {this.props.activeHeroes}/>
                 </div>;

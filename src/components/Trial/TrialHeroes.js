@@ -2,6 +2,16 @@ import React from 'react';
 import Hero from './Hero';
 
 class TrialHeroes extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            additionalShown : false
+        }
+    }
+
+    showAdditional(){
+        this.setState({additionalShown : true});
+    }
 
     render(){
 
@@ -17,6 +27,39 @@ class TrialHeroes extends React.Component {
                 Statue #{this.props.activeStatue} Solution
             </div> */}
                 <div className="hero-container">
+                    <div onClick={()=>this.showAdditional()} className="hero-additional-trigger">
+                        View Additional Lineups
+                    </div>
+                    {this.state.additionalShown ? 
+                    <div className="additional-container">
+                        {Object.keys(this.props.additionalLineups).map((lineup,index)=>{
+                            return <div className="hero-row-container">
+                            <div className="hero-row">
+                                {this.props.activeHeroes.herolist.map((hero, index) =>{
+                                    if(index > 4){
+                                        return;
+                                    }
+                                    return <Hero 
+                                            checked = {this.props.activeLineup.indexOf(index+1) != -1}
+                                            number = {this.props.activeLineup.indexOf(index+1) != -1 ? this.props.activeLineup.indexOf(index+1) + 1 : null}
+                                            name = {hero}/>
+                                })}
+                            </div>
+                            <div className="hero-row">
+                                {this.props.activeHeroes.herolist.map((hero, index) =>{
+                                    if(index < 5){
+                                        return;
+                                    }
+                                    return <Hero 
+                                            checked = {this.props.activeLineup.indexOf(index+1) != -1}
+                                            number = {this.props.activeLineup.indexOf(index+1) != -1 ? this.props.activeLineup.indexOf(index+1) + 1 : null}
+                                            name = {hero}/>
+                                })}
+                            </div>
+                        </div>
+                        })}
+                    </div>:
+                    <div className="nothing"></div>}
                     <div className="hero-formation-container">
                         <div className="backline">
                             {this.props.activeLineup.map((hero, index) =>{

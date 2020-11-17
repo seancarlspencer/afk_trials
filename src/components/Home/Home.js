@@ -13,6 +13,7 @@ class Home extends React.Component {
             checklist: null
         },
         activeLineup: null,
+        additionalLineups: {},
         activeStatue: null,
         heroPools: {},
         activeInfo: {
@@ -45,7 +46,7 @@ class Home extends React.Component {
         }
     }
 
-    statueClicked(trial, pool, check, lineup, statueNum){
+    statueClicked(trial, pool, check, lineup, additional, statueNum){
         let temp = {
             herolist : pool,
             checklist : check
@@ -53,6 +54,7 @@ class Home extends React.Component {
         this.setState({active: trial});
         this.setState({activeHeroes: temp});
         this.setState({activeLineup: lineup});
+        this.setState({additionalLineups: (additional ? additional : {})});
         this.setState({activeStatue: statueNum});
         let currentHighlight = document.querySelector(".activeNum");
         if (currentHighlight){
@@ -104,6 +106,7 @@ class Home extends React.Component {
                                 activeHeroes = {this.state.activeHeroes}
                                 activeStatue = {this.state.activeStatue}
                                 activeLineup = {this.state.activeLineup}
+                                additionalLineups = {this.state.additionalLineups}
                                 active = {this.state.active}/>
                         </div>}
                 </div>;

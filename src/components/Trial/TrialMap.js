@@ -32,7 +32,7 @@ class TrialMap extends React.Component {
                         className="statue-click-div"
                         onMouseEnter = {()=>this.highlightStatue(index)}
                         onMouseLeave = {()=>this.unHighlightStatue(index)}
-                        onClick = {()=>this.props.statueClicked(this.props.activeInfo.name, this.props.activeInfo[this.props.activeInfo.statues[statue].pool], this.props.activeInfo.statues[statue].checked, this.props.activeInfo.statues[statue].lineup, statue)}>
+                        onClick = {()=>this.props.statueClicked(this.props.activeInfo.name, this.props.activeInfo[this.props.activeInfo.statues[statue].pool], this.props.activeInfo.statues[statue].checked, this.props.activeInfo.statues[statue].lineup, this.props.activeInfo.statues[statue].additional, statue)}>
                             <img
                             src={require(`../../assets/tower basic.png`)}
                             className={`image image-${index}`}
@@ -45,8 +45,10 @@ class TrialMap extends React.Component {
                             <span
                             className={`number-${index+1}`}
                             style={{
-                                top: `calc(calc(${this.props.activeInfo.statues[statue].top} * calc(var(--trial-w) / 1422)) + calc(calc(var(--trial-w) / 1422) * 50px))`,
-                                left: `calc(calc(${this.props.activeInfo.statues[statue].left} * calc(var(--trial-w) / 1422)) - calc(calc(var(--trial-w) / 1422) * 25px))`
+                                top: `calc(calc(${this.props.activeInfo.statues[statue].top} / 901) * var(--trial-height) + calc(calc(var(--trial-w) / 1422) * 50px))`,
+                                left: `calc(calc(${this.props.activeInfo.statues[statue].left} / 1422) * var(--trial-width) - calc(calc(var(--trial-w) / 1422) * 25px))`
+                                // top: `calc(calc(${this.props.activeInfo.statues[statue].top} * calc(var(--trial-w) / 1422)) + calc(calc(var(--trial-w) / 1422) * 50px))`,
+                                // left: `calc(calc(${this.props.activeInfo.statues[statue].left} * calc(var(--trial-w) / 1422)) - calc(calc(var(--trial-w) / 1422) * 25px))`
                             }}>{statue}</span>
                         </div>
                         // return <img
