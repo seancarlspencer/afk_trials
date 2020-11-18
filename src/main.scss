@@ -336,6 +336,10 @@ body{
         font-weight: 500;
         bottom: 10px;
         right: 20px;
+        &.inactive{
+            color: rgb(78, 78, 78);
+            cursor: default;
+        }
         @media (max-width:768px) { 
             font-size: 12px;
             /* big landscape tablets, laptops, and desktops */
@@ -350,8 +354,30 @@ body{
     }
     .additional-container{
         position: absolute;
-        height: 100%;
-        transform: translateY(100%);
+        transform: translateY(75%);
+        background-color: #EACB96;
+        width: 100%;
+        border-bottom-right-radius: 12px; 
+        border-bottom-left-radius: 12px;
+        @media screen and (max-width: 768px){
+            transform: translateY(72%);
+        }
+        hr{
+            border: rgba(0,0,0,.5) 1px solid;
+            width: 100%;
+        }
+        .additional-heroes-container{
+            display: inline-grid;
+            width: 100%;
+            padding-left: calc(var(--hero-proportion) * .8);
+            grid-template-columns: 20% 70%;
+            column-gap: 5%;
+            margin-top: 10px;
+            border-bottom: solid black 1px;
+            .hero-row-container{
+                // margin-right: 40px;
+            }
+        }
     }
 }
 

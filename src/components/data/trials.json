@@ -12,7 +12,7 @@
                 "lineup" : [8,3,9,6,1],
                 "additional" : {
                     "1" : [8,4,9,5,10],
-                    "2" : [8,4,9,5,10]
+                    "2" : [8,4,2,5,10]
                 }
             },
             "2" : {
@@ -80,6 +80,86 @@
                 "left" : "918",
                 "pool" : "pool2",
                 "lineup" : [2,4,8,5,1]
+            }
+        }
+    },
+    "Silas" : {
+        "name" : "Silas",
+        "pool1" : ["Silas","Nakoruru","Ezizh","Nara","Kelthur","Thoran","Warek","Isabella","Belinda","Khasos"],
+        "pool2" : ["Silas","Mezoth","Tidus","Satrana","Eironn","Rowan","Fawkes","Isabella","Belinda","Brutus"],
+        "pool3" : ["Silas","Ezio","Torne","Gorvo","Rigby","Oscar","Estrilda","Isabella","Belinda","Lyca"],
+        "statues" : {
+            "1" : {
+                "top" : "172",
+                "left" : "36",
+                "pool" : "pool1",
+                "lineup" : [5,6,4,1,8]
+            },
+            "2" : {
+                "top" : "376",
+                "left" : "247",
+                "pool" : "pool2",
+                "lineup" : [2,3,1,6,5]
+            },
+            "3" : {
+                "top" : "642",
+                "left" : "351",
+                "pool" : "pool2",
+                "lineup" : [2,3,5,6,1]
+            },
+            "4" : {
+                "top" : "698",
+                "left" : "743",
+                "pool" : "pool3",
+                "lineup" : [7,3,8,1,10]
+            },
+            "5" : {
+                "top" : "751",
+                "left" : "1282",
+                "pool" : "pool3",
+                "lineup" : [3,7,8,1,10]
+            },
+            "6" : {
+                "top" : "540",
+                "left" : "1213",
+                "pool" : "pool3",
+                "lineup" : [7,3,10,1,8]
+            },
+            "7" : {
+                "top" : "485",
+                "left" : "1028",
+                "pool" : "pool3",
+                "lineup" : [3,7,8,1,2]
+            },
+            "8" : {
+                "top" : "331",
+                "left" : "1069",
+                "pool" : "pool2",
+                "lineup" : [2,3,1,6,5]
+            },
+            "9" : {
+                "top" : "114",
+                "left" : "996",
+                "pool" : "pool2",
+                "lineup" : [2,3,1,6,5]
+            },
+            "10" : {
+                "top" : "15",
+                "left" : "426",
+                "pool" : "pool1",
+                "lineup" : [6,2,8,1,4]
+            },
+            "11" : {
+                "top" : "171",
+                "left" : "607",
+                "pool" : "pool1",
+                "lineup" : [6,2,8,1,4]
+            },
+            "12" : {
+                "top" : "227",
+                "left" : "499",
+                "pool" : "pool1",
+                "lineup" : [2,6,8,1,4]
             }
         }
     },
