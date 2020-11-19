@@ -16,6 +16,7 @@ class Trial extends React.Component {
                         active = {this.props.active}/>
                     <TrialHeroes 
                         activeLineup = {this.props.activeLineup}
+                        additionalSources = {this.props.activeInfo.sources}
                         additionalShown = {this.props.additionalShown}
                         showAdditional = {this.props.showAdditional.bind(this)}
                         hideAdditional = {this.props.hideAdditional.bind(this)}

@@ -84,6 +84,9 @@ class TrialHeroes extends React.Component {
                                                 name = {hero}/>
                                     })}
                                 </div>
+                                <div className="source">
+                                    <a href={this.props.additionalSources[index]}>Source</a>
+                                </div>
                             </div>
                         </div>
                         })}
